@@ -1,0 +1,43 @@
+
+.navbar-dark .navbar-nav .nav-link {
+  $size:14px;
+  color:rgba(255,255,255,0.7);
+  font-size: $size;
+  .fa {
+    font-size:22px;
+    line-height:22px;
+  }
+  .fa{
+    &.text-sm {
+      font-size: 14px;
+    }
+  }
+}
+
+button,input,a,.form-control {
+  &:focus,&:active {
+    outline:none;
+    box-shadow: none;
+  }
+}
+
+.profile-photo {
+  height: 20px;
+  width:20px;
+  background-color: #fff;
+  display: inline-block;
+  border:solid 1px #fff;
+  @include border-radius(22px);
+  @include fix-bg(no-repeat,center,absolute);
+  overflow: hidden;
+  position: relative;
+    img{
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -50%;
+      margin: 0 auto;
+      right: -50%;
+      min-width: 100%;
+    }
+}

@@ -1,0 +1,128 @@
+.text-xs {
+  font-size: 60%;
+}
+.text-sm {
+  font-size: 80%;
+}
+
+.user-profile {
+  .header-section {
+    background-image: url(img/bg-profile.jpg);
+    background-color: #444;
+    height:50px;
+    margin-bottom: 60px;
+    .profile-img {
+      height:80px;
+      width: 80px;
+      overflow:hidden;
+      position: relative;
+      background-color: #ccc;
+      top:20px;
+      border:solid 2px #fff;
+      @include box-shadow(0 2px 5px 0 rgba(0,0,0,0.2));
+      @include fix-bg(no-repeat,center,absolute);
+      @include border-radius(40px);
+        img{
+          position: absolute;
+          min-width: 100%;
+          height: 100%;
+          left: -50px;
+          right:-50px;
+          margin:  0 auto;
+        }
+    }
+  }
+}
+
+.user-detail {
+  .header-section{
+    height:150px;
+    margin-bottom: 90px;
+    .profile-img{
+      top:110px;
+      left: 20px;
+      right: initial;
+      height: 120px;
+      width:120px;
+      @include border-radius(120px);
+      img{
+      }
+    }
+  }
+
+  .show-detail {
+    line-height: 16px;
+    font-size: 12px;
+    height: 48px;
+    overflow: hidden;
+    &:after{
+      content:"...";
+      display: inline-block;
+      position: absolute;
+      right:0;
+      bottom:0.75rem;
+      background-color: #fff;
+      line-height: 16px;
+      padding: 0 5px;
+
+    }
+    &.open {
+      height: auto;
+      &:after{
+        content: none;
+      }
+    }
+  }
+
+  .fa-img {
+    width:30px;
+    color:#0009;
+  }
+}
+
+
+.follow-related {
+  .media-body {
+    .list-related {
+      margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+    }
+  }
+}
+
+
+.text-primary {
+  color:#0077B5!important;
+}
+
+.btn-primary {
+  background-color: #0077B5;
+  border-color:#0077B5;
+  &:focus,&:active,&:hover {
+    background-color: #0077B5;
+    border-color:#0077B5
+  }
+}
+
+.btn-outline-primary {
+  border-color:#0077B5;
+  color:#0077B5;
+  &:focus,&:active,&:hover {
+    background-color: #0077B5;
+    border-color:#0077B5;
+  }
+}
+
+.search-result-component {
+  width: 50%;
+  min-width: 300px;
+  position: absolute;
+  z-index: 2;
+  display: none;
+}
+
+body {
+  background-color: #F5F5F5;
+}
